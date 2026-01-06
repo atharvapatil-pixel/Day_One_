@@ -1,0 +1,4 @@
+Q.1 Why is normalization important? What problems occur if a database is not normalized?
+
+
+Normalization is the process of organizing data to reduce redundancy and improve integrity by ensuring each piece of information is stored in only one place. Without it, databases suffer from anomalies: Update Anomalies occur when changing a value in one spot leaves old data elsewhere; Insertion Anomalies prevent you from adding data without other unrelated information; and Deletion Anomalies cause accidental loss of unrelated data when a record is removed. Essentially, normalization prevents data inconsistency, saves storage space, and ensures that the database remains accurate and easy to maintain as it grows.
