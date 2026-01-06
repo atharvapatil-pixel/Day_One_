@@ -1,0 +1,20 @@
+1) Banking system
+type-: SQL
+
+A banking system relies on an SQL database to act as a secure, digital ledger where money transfers are treated as a single "all-or-nothing" unit called a transaction, ensuring that if you send money to a friend, the system simultaneously deducts the amount from your balance and adds it to theirs.
+
+By following ACID properties, the database guarantees Atomicity, meaning if a technical error occurs halfway through, the system triggers a Rollback to undo the partial changes so your money doesn't disappear; Consistency, which uses strict rules and constraints to prevent illegal states like a negative balance or duplicate account numbers; and Isolation, which uses locking mechanisms to prevent multiple transactions from interfering with each other at the exact same microsecond.
+
+
+2) Ecommerce Application
+
+type-: SQL
+
+An E-commerce application uses an SQL database to organize vast amounts of structured data into related tables, such as Users, Products, and Orders, allowing the system to instantly link a specific customer to their purchase history and shipping address. Because events like Placing an Order involve multiple steps—deducting stock from inventory, processing a payment, and generating a shipping label—SQL’s ACID properties ensure these actions happen as a single, atomic unit; if the payment fails, the inventory count is automatically rolled back so stock levels remain accurate. 
+This relational structure is vital for maintaining data integrity, ensuring that a product cannot be sold if it's out of stock and that every order is permanently recorded and searchable, providing the high reliability and complex querying power needed to manage millions of simultaneous transactions securely.
+
+3) Social Media
+type-: NoSQL
+
+Social media applications utilize NoSQL databases like Document or Graph stores to manage massive volumes of unstructured data, such as posts, comments, and diverse media types, that don't fit into a rigid table format. By using a flexible schema, these databases allow developers to roll out new features—like adding "Reactions" or "Stories"—without the downtime required to restructure a traditional database. Furthermore, NoSQL is designed for horizontal scaling, meaning as the user base grows into the billions, the system can handle intense read/write traffic by spreading data across multiple servers. In a Graph-based NoSQL system, relationships like "Friends," "Followers," or "Likes" are treated as direct links, allowing the app to quickly navigate complex social networks to suggest new connections.
+
