@@ -1,0 +1,5 @@
+Proposed Composite Index-: 
+	CREATE INDEX id_bookings_doctor_date
+	ON bookings (doctor_id, appointment_date);
+	
+The column doctor_id is placed first because it is used in an equality condition, which allows the database to efficiently filter records for a specific doctor. The appointment_date column is placed second because it is used in a range condition. This order enables the database to quickly narrow down the result set by doctor and then efficiently scan the required date range, resulting in optimal query performance.
