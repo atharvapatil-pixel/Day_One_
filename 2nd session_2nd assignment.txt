@@ -1,0 +1,20 @@
+Soft Delete System: E-commerce Order Management
+
+Soft deletes are required in e-commerce systems where order history must be preserved for auditing, refunds, customer support, and legal purposes. Instead of deleting the record permanently, a flag such as deleted_at is used to mark the record as deleted while keeping the data intact.
+
+	Instead of:
+
+	DELETE FROM orders WHERE id = 101;
+
+
+	We do:
+
+	UPDATE orders SET deleted_at = NOW() WHERE id = 101;
+
+
+Hard Delete System: Session / Cache Management
+
+Hard deletes are preferred in systems that manage temporary data like user sessions or cache entries. Once the session expires or the user logs out, the data is no longer useful and should be permanently removed to save memory and improve system performance.
+
+	DELETE FROM user_sessions WHERE session_id = 'dhi34sr';
+
