@@ -1,0 +1,12 @@
+Suggested Indexes
+1) Order id
+	- provides fast access to a single order record.
+	- Uniquely identifies each order.
+	
+2) user_id
+	-Frequently used to fetch all orders of a particular user.
+	- Improves performance of user-based queries.
+
+3) Composite Index on user_id, created_at
+	-Optimizes queries that filter by user and sort by order creation time.
+	-Common in order history pages.
